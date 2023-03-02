@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
-class GreenView extends StatelessWidget {
+class GreenView extends StatefulWidget {
   const GreenView({super.key});
 
   @override
+  State<GreenView> createState() => _GreenViewState();
+}
+
+class _GreenViewState extends State<GreenView> with AutomaticKeepAliveClientMixin {
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
 
 
     return ListView.builder(
@@ -21,4 +27,7 @@ class GreenView extends StatelessWidget {
       },
     );
   }
+  
+  @override
+  bool get wantKeepAlive => true;
 }
